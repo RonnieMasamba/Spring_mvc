@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1 align="center">Welcome to Spring</h1>
 </body>
 </html>

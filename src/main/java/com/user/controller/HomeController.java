@@ -18,6 +18,9 @@ public class HomeController {
 	public String home() {
 		logger.debug("Home controller processing request");
 		return "home";
+		
+		
+		
 
 	}
 
