@@ -1,16 +1,12 @@
 package hr_system;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Test;
 
-import org.junit.jupiter.api.Test;
-
-
-
-class HomeControllerTest  {
+public class HomeControllerTest  {
 	
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void test() {
+		
 	}
 
 }

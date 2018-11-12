@@ -8,13 +8,13 @@
 
 
 <dependencies>
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-webmvc</artifactId>
     <version>5.1.2.RELEASE</version>
 </dependency>
+ 
 
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
 <dependency>
@@ -32,6 +32,13 @@
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.0.0-M5</version>
+    <scope>test</scope>
+</dependency>
 
 
 <dependency>
@@ -58,7 +65,6 @@
   <artifactId>junit-dep</artifactId>
   <version>4.8.2</version>
 </dependency>
-
 
 </dependencies>
 

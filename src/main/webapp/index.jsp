@@ -5,6 +5,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
+<h1>It works</h1>
+
 </head>
 <body>
 

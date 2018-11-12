@@ -12,7 +12,6 @@
     http://www.springframework.org/schema/tx/spring-tx.xsd">
 
 <context:component-scan base-package="com.user.controller.HomeController"/>
-
 	<tx:annotation-driven/>
 
 
@@ -49,7 +48,7 @@
 			class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 			name="viewResolver">
 			<property name="prefix">
-				<value>/WEB-INF/view</value>
+				<value>/WEB-INF/view/</value>
 			</property>
 			<property name="suffix">
 				<value>.jsp</value>
