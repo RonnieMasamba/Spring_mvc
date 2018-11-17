@@ -19,9 +19,12 @@ public class HomeController {
 		logger.debug("Home controller processing request");
 		return "home";
 		
-		
-		
+	}
+	@RequestMapping("/login")
+	public String login(){
+		return "Login";
+	}
 
 	}
 
-}
+

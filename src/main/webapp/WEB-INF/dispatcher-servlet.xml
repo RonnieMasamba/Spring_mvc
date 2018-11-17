@@ -13,15 +13,16 @@
     http://www.springframework.org/schema/mvc/spring-mvc.xsd
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx.xsd">
+    
 
 <context:component-scan base-package="com.user.controller"/>
-<mvc:annotation-driven/>
+  <mvc:annotation-driven/>
 
 
 	<bean
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		name="dataSource" p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql://localhost/company"
-		p:username="root" p:password="ronnie" />
+		p:username="root" p:password="ronnie"/>
 
 	<bean
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"
@@ -32,11 +33,11 @@
 				<prop key="hibernate.sql_show">true</prop>
 			</props>
 		</property>
-		<!-- <property name="annotatedClasses">
+		 <property name="annotatedClasses">
 			<list>
 				<value>com.user.dto.User</value>
 			</list>
-		</property> -->
+		</property>
 		
 		</bean>
 		<bean class="org.springframework.orm.hibernate5.HibernateTemplate"

@@ -1,5 +1,6 @@
 package com.user.dao;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -8,12 +9,13 @@ import com.user.dto.User;
 @Repository
 public class UserDAOImpl implements  UserDAO{
 	
-	
+	@Autowired
 	private HibernateTemplate hibernateTemplate;
 
 	
 	public int create(User user) {
-		return 0;
+	Integer result =(Integer)hibernateTemplate.save(user);
+	return result;
 	}
 
 

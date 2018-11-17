@@ -9,8 +9,5 @@
         <module name="hr_system" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="hr_system" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

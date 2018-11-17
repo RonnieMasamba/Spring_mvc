@@ -5,11 +5,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-
-<h1 align="center">It works</h1>
-
 </head>
 <body>
-
+ <h1 align="center">Login</h1>
 </body>
 </html>
