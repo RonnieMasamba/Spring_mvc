@@ -6,14 +6,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.user.dao.UserDAO;
 import com.user.dto.User;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private UserDAO dao;
 
+	@Transactional
 	public int save(User user) {
-		return 0;
+		/*
+		 Business logic
+		 */
+		return dao.create(user);
+
 	}
 
 	public int update(int id) {
