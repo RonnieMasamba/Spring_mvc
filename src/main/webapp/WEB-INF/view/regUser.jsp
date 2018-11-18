@@ -14,7 +14,7 @@
 
 <h1 align="center">User registration </h1>
 
-<form>
+<form action="registerUser" method="post">
 
 Id <input type="text" name="id"/><br/>
 Name<input type="text" name="name"/><br/>

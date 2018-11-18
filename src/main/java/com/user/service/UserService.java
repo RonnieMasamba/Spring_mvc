@@ -5,7 +5,7 @@ import java.util.List;
 import com.user.dto.User;
 import org.springframework.stereotype.Repository;
 
-
+@Repository
 public interface UserService {
 	
 	/**
@@ -16,7 +16,7 @@ public interface UserService {
  int save(User user);
  int update(int id);
  int delete(int id);
- List<User>findAll();
+ List<User>getUsers();
  
 
 }

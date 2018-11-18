@@ -5,32 +5,39 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name="User")
-public class User {
-	
-@Id
-@Column(name="user_id")
-private int id;
-@Column(name="first_name")
-private String firstName;
-@Column(name="last_name")
-private String lastName;
+public class User implements Comparable<User> {
 
-public int getId() {return id;}
+	@Id
+	@Column(name = "user_id")
+	private int id;
+	@Column(name = "name")
+	private String name;
+	@Column(name = "email")
+	private String email;
 
-public void setId(int id) {	this.id = id;}
+	public int getId() {return id;}
 
-public String getFirstName() {return firstName;}
+	public void setId(int id) {	this.id = id;}
 
-public void setFirstName(String firstName) {this.firstName = firstName;}
+	public String getName() {return name;}
 
-public String getLastName() {	return lastName;}
-public void setLastName(String lastName) {	this.lastName = lastName;}
+	public void setName(String name) {this.name = name;	}
 
-public String toString() {
-	return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+	@Override
+	public String toString() {
+		return "User{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", email='" + email + '\'' +
+				'}';
+	}
+
+	@Override
+	public int compareTo(User user) {
+		/*
+		 Sort users by primary key .
+		 */
+		return this.id.compareTo(user.id);
+	}
 }
 
-
-
-
-}
