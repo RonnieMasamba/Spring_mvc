@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<User> getUsers() {
 		List<User>users=dao.findUsers();
-		Collections.sort(users);
+		
 		return users;
 	}
 

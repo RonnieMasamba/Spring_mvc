@@ -1,6 +1,5 @@
 package com.user.controller;
 
-import com.user.dao.UserDAOImpl;
 import com.user.dto.User;
 import com.user.service.UserService;
 import org.jboss.logging.Logger;
@@ -14,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.List;
 
-@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
+
 @Controller
 public class HomeController {
 
@@ -29,19 +28,19 @@ public class HomeController {
 
 	}
 
-	@RequestMapping("/registration")
+	@RequestMapping("registration")
 	public String registerUser() {
 		logger.debug("Home controller processing request");
-		return "regUser";
+		return "register";
 		
 
 	}
-	@RequestMapping("/registration")
+	@RequestMapping("viewUser")
 	public String getUser(ModelMap model){
 		List<User> users=service.getUsers();
 		model.addAttribute("users",users);
 		logger.debug("Home controller processing request");
-		return "displayUsers";
+		return "viewUser";
 
 	}
 
@@ -50,7 +49,7 @@ public class HomeController {
 	int result =service.save(user);
 		logger.debug(user);
 		model.addAttribute("result","User created with ID" + result);
-		return "regResult";
+		return "viewUser";
 	}
 
 	}

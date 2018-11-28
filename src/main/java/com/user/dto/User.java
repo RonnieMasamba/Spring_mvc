@@ -1,43 +1,51 @@
 package com.user.dto;
 
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name="User")
-public class User implements Comparable<User> {
+@Entity
+@Table(name="user")
+public class User {
 
-	@Id
-	@Column(name = "user_id")
-	private int id;
-	@Column(name = "name")
-	private String name;
-	@Column(name = "email")
-	private String email;
 
-	public int getId() {return id;}
+    @Id
+    private int id;
+    private String name;
+    private String email;
 
-	public void setId(int id) {	this.id = id;}
 
-	public String getName() {return name;}
+    public int getId() {
+        return id;
+    }
 
-	public void setName(String name) {this.name = name;	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	@Override
-	public String toString() {
-		return "User{" +
-				"id=" + id +
-				", name='" + name + '\'' +
-				", email='" + email + '\'' +
-				'}';
-	}
+    public String getName() {
+        return name;
+    }
 
-	@Override
-	public int compareTo(User user) {
-		/*
-		 Sort users by primary key .
-		 */
-		return this.id.compareTo(user.id);
-	}
-}
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+
+
+
+         }
+
+
+
 

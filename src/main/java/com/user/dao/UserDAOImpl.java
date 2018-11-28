@@ -1,12 +1,12 @@
 package com.user.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
+
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.user.dto.User;
-import org.springframework.transaction.annotation.Propagation;
+
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -28,6 +28,7 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@Override
+	@Transactional
 	public int create(User user) {
 		/*
 		 Submit using registration.jsp form post method in controller .

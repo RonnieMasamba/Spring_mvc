@@ -5,7 +5,7 @@ import java.util.List;
 import com.user.dto.User;
 import org.springframework.stereotype.Repository;
 
-@Repository
+
 public interface UserService {
 	
 	/**

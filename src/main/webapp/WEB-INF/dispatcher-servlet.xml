@@ -4,27 +4,24 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd
-    http://www.springframework.org/schema/mvc
-    http://www.springframework.org/schema/mvc/spring-mvc.xsd
     http://www.springframework.org/schema/tx
     http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+
+
 	<context:component-scan base-package="com.user.controller,com.user.service,com.user.dao"/>
-
-<mvc:annotation-driven/>
-
+	<tx:annotation-driven/>
 
 
 
 
 	<bean
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-		name="dataSource" p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql://localhost/company"
+		name="dataSource" p:driverClassName="com.mysql.jdbc.Driver" p:url="jdbc:mysql://localhost:3306/company"
 		p:username="root" p:password="ronnie"/>
 
 	<bean
